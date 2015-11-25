@@ -7,9 +7,11 @@ import shutil
 
 def _download(url):
     file_name = url.split('/')[-1]
+    urlopen = urllib.request.urlopen
 
-    with urllib.request.urlopen(url) as response, open(file_name, 'wb') as out_file:
+    with urlopen(url) as response, open(file_name, 'wb') as out_file:
         shutil.copyfileobj(response, out_file)
+
 
 def parallelize(url_list):
     if isinstance(url_list, list):
@@ -19,4 +21,3 @@ def parallelize(url_list):
         _download(url_list)
     else:
         raise TypeError()
-
