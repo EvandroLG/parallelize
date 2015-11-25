@@ -1,4 +1,7 @@
 # parallelize
+[![Build
+Status](https://travis-ci.org/EvandroLG/parallelize.svg?branch=master)](https://travis-ci.org/EvandroLG/parallelize)
+
 Simple solution to make parallel download with Python
 
 ## Why?
