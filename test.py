@@ -4,8 +4,8 @@ from unittest import TestCase, mock
 import parallel_download as parallel, multiprocessing
 
 class TestParallelDownload(TestCase):
-    #def test_should_raise_a_exception_when_paramer_is_not_string_or_list(self):
-        #self.assertRaises(TypeError, parallel.parallel_download(1))
+    def test_should_raise_a_exception_when_paramer_is_not_string_or_list(self):
+        self.assertRaises(TypeError, parallel.parallel_download(1))
 
     @mock.patch('parallel_download._download')
     def test_should_call_download_function_without_create_processes_when_parameter_is_a_string(self, *args):
