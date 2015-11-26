@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
 
 from unittest import TestCase, mock
-import parallelize, multiprocessing
+import pyrallelize, multiprocessing
 
 class TestParallelDownload(TestCase):
     def test_should_raise_a_exception_when_paramer_is_not_string_or_list(self):
-        self.assertRaises(TypeError, parallelize.parallelize, 1)
+        self.assertRaises(TypeError, pyrallelize.pyrallelize, 1)
 
-    @mock.patch('parallelize._download')
+    @mock.patch('pyrallelize._download')
     def test_should_call_download_function_without_create_processes_when_parameter_is_a_string(self, *args):
-        parallelize.parallelize('http://www.google.com/')
-        self.assertEqual(parallelize._download.call_count, 1)
+        pyrallelize.pyrallelize('http://www.google.com/')
+        self.assertEqual(pyrallelize._download.call_count, 1)
 
-    @mock.patch('parallelize._download')
+    @mock.patch('pyrallelize._download')
     @mock.patch('multiprocessing.pool.Pool')
     def test_should_call_download_function_3_times(self, *args):
-        parallelize.parallelize([
+        pyrallelize.pyrallelize([
             'http://www.google.com/',
             'http://www.github.com/',
             'http://www.facebook.com/'

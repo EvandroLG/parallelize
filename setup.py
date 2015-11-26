@@ -5,7 +5,7 @@ from setuptools import setup
 import os
 
 setup(
-    name='parallelize',
+    name='pyrallelize',
     version='0.0.1',
     description='Solution to make parallel download with Python',
     author='EvandroLG',
@@ -13,5 +13,5 @@ setup(
     keywords=['parallel', 'multiprocessing', 'download', 'process'],
     url='http://github.com/EvandroLG/parallelize',
     license='MIT',
-    packages=['parallelize']
+    packages=['pyrallelize']
 )

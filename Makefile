@@ -4,7 +4,7 @@ unit_test:
 	python -m unittest test.py
 
 pep8:
-	pep8 parallelize/
+	pep8 pyrallelize/
 
 test: pep8 unit_test
 

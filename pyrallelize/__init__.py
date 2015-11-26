@@ -13,7 +13,7 @@ def _download(url):
         shutil.copyfileobj(response, out_file)
 
 
-def parallelize(url_list):
+def pyrallelize(url_list):
     if isinstance(url_list, list):
         p = Pool(len(url_list))
         p.map(_download, url_list)
