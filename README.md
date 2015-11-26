@@ -11,7 +11,7 @@ The library is a solution to that problem, `pyrallelize` downloads all files in 
 ## Install
 To install `pyrallelize`, simply:
 ```shell
-  pip install pyrallelize
+$ pip install pyrallelize
 ```
 
 ## How does it work?
@@ -31,3 +31,17 @@ Follow an example:
 ## Parameters
 * **url_list** <code>list</code>
 * **directory** <code>str</code>
+
+## Contributing
+
+### Install Dependencies
+
+```shell
+$ make install_dependencies
+```
+
+### Running tests
+
+```shell
+$ make test
+```
