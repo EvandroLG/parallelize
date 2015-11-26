@@ -4,10 +4,11 @@ from multiprocessing import Pool
 from functools import partial
 import urllib.request
 import shutil
+import os
 
 
 def _download(url, directory):
-    file_name = '%s%s' % (directory, url.split('/')[-1])
+    file_name = os.path.join(directory, url.split('/')[-1])
     urlopen = urllib.request.urlopen
 
     with urlopen(url) as response, open(file_name, 'wb') as out_file:
