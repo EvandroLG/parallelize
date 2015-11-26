@@ -6,7 +6,7 @@ import os
 
 setup(
     name='pyrallelize',
-    version='0.0.1',
+    version='0.0.2',
     description='Solution to make parallel download with Python',
     author='EvandroLG',
     author_email='evandrolgoncalves@gmail.com',
