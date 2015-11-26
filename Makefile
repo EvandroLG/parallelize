@@ -13,3 +13,6 @@ update:
 
 install_dependencies:
 	pip install -r requirements.txt
+
+update_pypi:
+	python setup.py sdist upload -r pypi
